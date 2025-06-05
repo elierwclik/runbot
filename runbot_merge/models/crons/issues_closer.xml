@@ -13,11 +13,5 @@
         <field name="model_id" ref="model_runbot_merge_issues_closer"/>
         <field name="state">code</field>
         <field name="code">model._run()</field>
-        <!--
-        nota: even though this is only triggered, numbercall has to be
-        non-zero because the counter is taken in account by cron triggers
-        -->
-        <field name="numbercall">-1</field>
-        <field name="doall" eval="False"/>
     </record>
 </odoo>
