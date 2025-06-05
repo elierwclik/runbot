@@ -20,7 +20,7 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_tree"/>
         <field name="arch" type="xml">
-            <xpath expr="//tree" position="replace">
+            <xpath expr="//list" position="replace">
                 <tree string="Contacts">
                     <field name="display_name" string="Name"/>
                     <field name="github_login"/>
