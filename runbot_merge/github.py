@@ -45,7 +45,10 @@ def _init_gh_logger():
     _gh.addHandler(handler)
     _gh.propagate = False
 
-if odoo.netsvc._logger_init:
+def is_logger_initialized():
+    return logging.getLogRecordFactory() is odoo.netsvc.LogRecord
+
+if is_logger_initialized():
     _init_gh_logger()
 
 SimpleUser = TypedDict('SimpleUser', {
