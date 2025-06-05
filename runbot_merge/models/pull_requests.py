@@ -1335,7 +1335,7 @@ For your own safety I've ignored *everything in your entire comment*.
 
         super()._auto_init()
         # incorrect index: unique(number, target, repository).
-        tools.drop_index(self.env.cr, 'runbot_merge_unique_pr_per_target', self._table)
+        tools.sql.drop_index(self.env.cr, 'runbot_merge_unique_pr_per_target', self._table)
         # correct index:
         tools.create_unique_index(
             self.env.cr, 'runbot_merge_unique_pr_per_repo', self._table, ['repository', 'number'])
